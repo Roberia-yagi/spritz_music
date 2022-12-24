@@ -6,7 +6,11 @@ def recognize_from_microphone():
     speech_config = speechsdk.SpeechConfig(subscription=os.environ.get('SPEECH_KEY'), region=os.environ.get('SPEECH_REGION'))
     speech_config.speech_recognition_language="en-US"
 
+    # Input from a mic
     audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
+    # Input from a music file
+    # audio_config = speechsdk.audio.AudioConfig(filename='./speech.wav')
+
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
 
     print("Speak into your microphone.")
