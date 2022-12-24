@@ -1,0 +1,3 @@
+[submodule "src/mbrain-shisperx"]
+	path = src/mbrain-shisperx
+	url = https://github.com/m-bain/whisperX
