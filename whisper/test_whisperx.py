@@ -1,10 +1,10 @@
 import whisperx
 
-device = "cpu" 
-audio_file = "materials/music.wav"
+device = "cuda:0"
+audio_file = "./materials/music.mp3"
 
 # transcribe with original whisper
-model = whisperx.load_model("large", device)
+model = whisperx.load_model("tiny", device)
 result = model.transcribe(audio_file, fp16=False)
 
 # load alignment model and metadata
